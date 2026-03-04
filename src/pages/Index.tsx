@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import Icon from "@/components/ui/icon";
 
-const BG_IMAGE = "https://cdn.poehali.dev/projects/1bc32aaf-dada-46ea-b752-420ce3e53085/bucket/77b654eb-c8b2-4250-9e59-bfd74974cb7f.jpg";
+
 
 const TRAP_OPTIONS = [
   { count: 1, label: "1 ловушка", maxWin: 4.7 },
@@ -127,12 +127,7 @@ export default function Index() {
 
   return (
     <div className="mines-root">
-      {/* Background */}
-      <div
-        className="mines-bg"
-        style={{ backgroundImage: `url(${BG_IMAGE})` }}
-      />
-      <div className="mines-overlay" />
+
 
       {/* How to play modal */}
       {showHow && (
@@ -280,24 +275,9 @@ export default function Index() {
           display: flex;
           align-items: center;
           justify-content: center;
+          background: #000;
           position: relative;
           overflow: hidden;
-        }
-
-        .mines-bg {
-          position: fixed;
-          inset: 0;
-          background-size: cover;
-          background-position: center top;
-          background-repeat: no-repeat;
-          z-index: 0;
-        }
-
-        .mines-overlay {
-          position: fixed;
-          inset: 0;
-          background: rgba(5, 10, 25, 0.55);
-          z-index: 1;
         }
 
         .mines-container {
